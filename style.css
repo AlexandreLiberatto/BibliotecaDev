@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-top: 80px; /* Espaço para o header fixo */
+  padding-bottom: 60px; /* Espaço para o footer fixo */
+}
+
+body.dark-mode {
+  background-color: #181c24;
+  color: #e0e0e0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.4rem 1.2rem;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+body.dark-mode header {
+  background: #232a36;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 48px;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 2rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+
+body.dark-mode .header-title {
+  color: #fff;
+}
+
+#search-bar-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+#search-bar {
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 220px;
+  margin: 0 0.5em;
+  height: 36px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+body.dark-mode #search-bar {
+  background: #232a36;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+#contatos {
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  margin-top: 0;
+  height: 48px;
+}
+
+#contatos a img {
+  height: 2em;
+  width: 2em;
+  min-width: 2em;
+  min-height: 2em;
+  max-width: 2em;
+  max-height: 2em;
+  object-fit: contain;
+  transition: transform 0.2s;
+  vertical-align: middle;
+}
+
+#contatos a:hover img {
+  transform: scale(1.15);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode footer {
+  background: #232a36;
+  color: #fff;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.25);
+}
+
+.footer-text {
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+body.dark-mode .footer-text {
+  color: #fff;
+}
+
+.footer-contatos {
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  margin-left: auto;
+}
+
+.footer-contatos a img {
+  height: 2.1em;
+  width: 2.1em;
+  min-width: 2.1em;
+  min-height: 2.1em;
+  max-width: 2.1em;
+  max-height: 2.1em;
+  object-fit: contain;
+  transition: transform 0.2s;
+  vertical-align: middle;
+}
+
+body.dark-mode .footer-contatos a img {
+  filter: brightness(0.8) invert(0.8);
+}
+
+.footer-contatos a:hover img {
+  transform: scale(1.15);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body.dark-mode .card {
+  background: #232a36;
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4; /* Define uma proporção fixa para as imagens */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  object-position: center; /* Centraliza a imagem dentro do contêiner */
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+.card-content h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  flex: 1 1 auto;
+}
+
+.card-content a {
+  display: block;
+  margin-top: auto;
+  padding: 0.6rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+body.dark-mode .card-content a {
+  background: #357ab8;
+  color: #fff;
+}
+
+.card-content a:hover {
+  background-color: #357ab8;
+}
+
+body.dark-mode .card-content a:hover {
+  background: #4a90e2;
+}
+
+.contribuicao {
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+body.dark-mode .contribuicao {
+  background: #232a36 !important;
+  color: #e0e0e0 !important;
+  border-color: #357ab8 !important;
+}
+
+.contribuicao p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.contribuicao button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+body.dark-mode .contribuicao button {
+  background: #e0e0e0;
+  color: #232a36;
+}
+
+.contribuicao button:hover {
+  background-color: #357ab8;
+}
+
+body.dark-mode .modal-carrossel,
+body.dark-mode .modal-carrossel-overlay,
+body.dark-mode .modal {
+  background: #232a36 !important;
+  color: #e0e0e0 !important;
+  border-color: #357ab8 !important;
+}
+
+body.dark-mode .modal-carrossel {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35) !important;
+}
+
+@media (max-width: 700px) {
+  .header-title {
+    font-size: 1.2rem;
+  }
+  #search-bar {
+    width: 120px;
+    font-size: 0.9em;
+  }
+  #contatos a img, .footer-contatos a img {
+    height: 1.3em;
+    width: 1.3em;
+    min-width: 1.3em;
+    min-height: 1.3em;
+    max-width: 1.3em;
+    max-height: 1.3em;
+  }
+  .header-flex {
+    min-height: 36px;
+  }
+  .footer-text {
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+  }
+  footer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.7em;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .footer-contatos {
+    margin-left: 0 !important;
+    justify-content: center;
+  }
+  #btn-contribuicoes {
+    margin-right: 0 !important;
+    margin-bottom: 0.3em;
+    width: 100%;
+    max-width: 320px;
+    align-self: center;
+  }
+}

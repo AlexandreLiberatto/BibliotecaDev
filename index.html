@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="capas/code_icon.png" />
+    <meta name="description" content="Análista e desenvolvedor de sistemas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Biblioteca Dev</title>
+
+    <!--======== EXIBIR A IMAGEM DO SITE NO LINK =============-->
+        <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+        <meta property="og:title" content="Biblioteca Dev">
+        <meta property="og:description" content="O Guia dos Programadores: Livros que Transformam Vidas!">
+        <meta property="og:image" content="capas/code_icon.png">
+        <meta property="og:type" content="website">
+        <!--======== EXIBIR A IMAGEM DO SITE NO LINK =============-->
+  
+</head>
+<body>
+  <header>
+    <div class="header-flex" style="flex-direction:column;align-items:center;justify-content:center;min-height:unset;padding:0.7rem 1.2rem 0.5rem 1.2rem;position:relative;">
+      <button id="toggle-dark" title="Alternar modo escuro" style="position:absolute;top:10px;right:10px;background:#222;color:#fff;border:none;border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 2px 8px rgba(44,62,80,0.13);cursor:pointer;z-index:2;transition:background 0.2s;">
+        🌙
+      </button>
+      <span class="header-title" style="margin:0 0 0.3em 0;">📚 Biblioteca Dev</span>
+      <div id="search-bar-container" style="width:100%;display:flex;justify-content:center;align-items:center;"></div>
+    </div>
+  </header>
+
+  <main id="biblioteca" class="grid-container">
+    <!-- Os livros serão inseridos aqui pelo JavaScript -->
+  </main>
+
+  <footer>
+    <button id="btn-contribuicoes" style="position:static;margin-right:auto;background:#fff;color:#4a90e2;border:1.5px solid #4a90e2;border-radius:22px;padding:0.5em 1.2em;font-size:1em;box-shadow:0 2px 8px rgba(44,62,80,0.08);cursor:pointer;opacity:0.85;transition:background 0.2s,color 0.2s,opacity 0.2s;">Contribuições</button>
+    <span class="footer-text">&copy; 2025 &lt;/Alexandre Liberato&gt; - Todos os direitos reservados</span>
+    <div class="footer-contatos">
+      <a href="https://wa.me/5548991604054" target="_blank" title="WhatsApp"><img src="icones/contact.svg" alt="WhatsApp"></a>
+      <a href="https://www.linkedin.com/in/alexandre-liberato-32179624b/" target="_blank" title="LinkedIn"><img src="icones/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://github.com/AlexandreLiberatto" target="_blank" title="GitHub"><img src="icones/github.svg" alt="GitHub"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('btn-contribuicoes').addEventListener('click', () => {
+      // Overlay escuro
+      const overlay = document.createElement('div');
+      overlay.style.position = 'fixed';
+      overlay.style.top = '0';
+      overlay.style.left = '0';
+      overlay.style.width = '100%';
+      overlay.style.height = '100%';
+      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+      overlay.style.zIndex = '1000';
+
+      // Modal centralizado com borda azul
+      const modal = document.createElement('div');
+      modal.style.position = 'fixed';
+      modal.style.top = '50%';
+      modal.style.left = '50%';
+      modal.style.transform = 'translate(-50%, -50%)';
+      modal.style.backgroundColor = '#fff';
+      modal.style.padding = '2rem';
+      modal.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
+      modal.style.borderRadius = '12px';
+      modal.style.textAlign = 'center';
+      modal.style.zIndex = '1001';
+      modal.style.width = '90%';
+      modal.style.maxWidth = '400px';
+      modal.style.border = '4px solid #4a90e2';
+
+      // Mensagem igual ao download
+      const texto = document.createElement('div');
+      texto.innerHTML = `<p>Se os livros o ajudaram de alguma forma, considere contribuir com qualquer valor.</p><p style="font-size:1.3rem;font-weight:bold;color:#4a90e2;margin:0.3em 0 0.2em 0;">Chave Pix:<br>48991604054</p>`;
+      texto.style.marginBottom = '1.5rem';
+      texto.style.fontSize = '1.1rem';
+      texto.style.color = '#333';
+      texto.style.lineHeight = '1.6';
+      texto.style.fontFamily = 'Arial, sans-serif';
+      texto.style.textAlign = 'center';
+
+      const fecharBtn = document.createElement('button');
+      fecharBtn.textContent = 'Fechar';
+      fecharBtn.style.padding = '0.8rem 1.5rem';
+      fecharBtn.style.backgroundColor = '#4a90e2';
+      fecharBtn.style.color = '#fff';
+      fecharBtn.style.border = 'none';
+      fecharBtn.style.borderRadius = '5px';
+      fecharBtn.style.cursor = 'pointer';
+      fecharBtn.style.fontSize = '1rem';
+
+      fecharBtn.addEventListener('click', () => {
+        document.body.removeChild(overlay);
+        document.body.removeChild(modal);
+      });
+
+      modal.appendChild(texto);
+      modal.appendChild(fecharBtn);
+      document.body.appendChild(overlay);
+      document.body.appendChild(modal);
+    });
+
+    // Alternar modo dark
+    const btnDark = document.getElementById('toggle-dark');
+    btnDark.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      btnDark.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
