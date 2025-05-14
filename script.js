@@ -491,7 +491,7 @@ container.addEventListener('click', (event) => {
 
     // Mensagem melhorada: texto e chave Pix em destaque
     const texto = document.createElement('div');
-    texto.innerHTML = `<p>Se os livros o ajudaram de alguma forma, considere contribuir com qualquer valor.</p><p style="font-size:1.3rem;font-weight:bold;color:#4a90e2;margin:0.3em 0 0.2em 0;">Chave Pix:<br>48991604054</p>`;
+    texto.innerHTML = `<p>Se os livros o ajudaram de alguma forma, considere ajudar com qualquer valor (opcional).</p><p style="font-size:1.3rem;font-weight:bold;color:#4a90e2;margin:0.3em 0 0.2em 0;">Chave Pix:<br>48991604054</p>`;
     texto.style.marginBottom = '1.5rem';
     texto.style.fontSize = '1.1rem';
     texto.style.color = '#333';
