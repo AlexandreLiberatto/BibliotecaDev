@@ -171,7 +171,7 @@ const livros = [
 
 const container = document.getElementById("biblioteca");
 
-const mensagemContribuicao = `Se os livros o ajudaram de alguma forma e tocaram seu coração, considere contribuir com qualquer valor. A chave Pix é 49991604054.`;
+const mensagemContribuicao = `Se os livros o ajudaram de alguma forma e tocaram seu coração, considere ajudar com qualquer valor (opcional). A chave Pix é 49991604054.`;
 
 // Adiciona barra de busca no topo
 const header = document.querySelector('header');
