@@ -171,7 +171,7 @@ const livros = [
 
 const container = document.getElementById("biblioteca");
 
-const mensagemContribuicao = `Se os livros o ajudaram de alguma forma e tocaram seu coração, considere ajudar com qualquer valor (opcional). A chave Pix é 49991604054.`;
+const mensagemContribuicao = `Se os livros te ajudaram de alguma forma e você quiser contribuir, qualquer valor é bem-vindo (opcional). Este projeto é sem fins lucrativos — o único objetivo é ajudar desenvolvedores em início de carreira. Chave Pix: 49991604054.`;
 
 // Adiciona barra de busca no topo
 const header = document.querySelector('header');
@@ -489,9 +489,9 @@ container.addEventListener('click', (event) => {
     modal.style.maxWidth = '400px';
     modal.style.border = '4px solid #4a90e2';
 
-    // Mensagem sutil e educada para contribuição Pix
-    const texto = document.createElement('div');
-    texto.innerHTML = `<p style="margin-bottom:0.7em;">Se este conteúdo te ajudou de alguma forma e você sentir no coração vontade de retribuir, qualquer contribuição é muito bem-vinda.<br>Mas não se preocupe, não é obrigatório! Só contribua se realmente quiser e achar que vale a pena apoiar este projeto.</p><p style="font-size:1.3rem;font-weight:bold;color:#4a90e2;margin:0.3em 0 0.2em 0;">Chave Pix:<br>48991604054</p>`;
+  // Mensagem sutil e educada para contribuição Pix
+  const texto = document.createElement('div');
+  texto.innerHTML = `<p style="margin-bottom:0.7em;">Este projeto é sem fins lucrativos, o único objetivo é ajudar desenvolvedores, que assim como eu, estão em início de carreira.</p><p style="font-size:1.1rem;font-weight:bold;color:#4a90e2;margin:0.3em 0 0.2em 0;">Bons Estudos!</p>`;
     texto.style.marginBottom = '1.5rem';
     texto.style.fontSize = '1.1rem';
     texto.style.color = '#333';

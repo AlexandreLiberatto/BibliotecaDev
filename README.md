@@ -47,7 +47,7 @@ O objetivo é compartilhar conhecimento e facilitar o acesso a materiais de qual
 1. Abra o arquivo `index.html` em seu navegador.
 2. Utilize a barra de busca para encontrar livros rapidamente.
 3. Clique na capa para ver detalhes ou no botão "Baixar" para fazer o download.
-4. Se desejar, contribua para o projeto usando a chave Pix informada no site.
+4. Se desejar, você pode contribuir usando a chave Pix informada no site. Essa contribuição é totalmente opcional — este projeto é sem fins lucrativos e tem como único objetivo ajudar desenvolvedores em início de carreira.
 
 ---
 
